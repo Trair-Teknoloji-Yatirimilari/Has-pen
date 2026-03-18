@@ -1349,8 +1349,9 @@ section {
     height: 50px;
     width: auto;
     display: block;
-    background: transparent;
-    mix-blend-mode: multiply;
+    background: var(--white);
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 .nav-brand a {
@@ -1361,5 +1362,6 @@ section {
 @media (max-width: 768px) {
     .nav-brand .logo {
         height: 40px;
+        padding: 4px 8px;
     }
 }
