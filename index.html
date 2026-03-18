@@ -663,7 +663,13 @@
         <div class="container">
             <span class="section-label">İletişim</span>
             <h2 class="section-title">Ücretsiz Teklif Alın</h2>
-            <form class="quote-form" id="quoteForm">
+            <form class="quote-form" id="quoteForm" action="https://formsubmit.co/info@haspen.com.tr" method="POST">
+                <!-- FormSubmit Ayarları -->
+                <input type="hidden" name="_subject" value="HASPEN - Yeni Teklif Talebi">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                
                 <div class="form-row">
                     <input type="text" name="name" placeholder="Adınız Soyadınız *" required>
                     <input type="tel" name="phone" placeholder="Telefon Numaranız *" required>
@@ -677,6 +683,7 @@
                         <option value="celik-kapi">Çelik Kapı</option>
                         <option value="cam-balkon">Cam Balkon</option>
                         <option value="dusa-kabin">Duşa Kabin</option>
+                        <option value="bakim-onarim">Bakım & Onarım</option>
                     </select>
                 </div>
                 <textarea name="message" rows="4" placeholder="Projeniz hakkında detaylar (opsiyonel)"></textarea>
