@@ -1346,12 +1346,11 @@ section {
 
 /* Logo Styles */
 .nav-brand .logo {
-    height: 50px;
+    height: 70px;
     width: auto;
     display: block;
-    background: var(--white);
-    padding: 5px 10px;
-    border-radius: 4px;
+    filter: brightness(0) invert(1);
+    background: transparent;
 }
 
 .nav-brand a {
@@ -1361,7 +1360,6 @@ section {
 
 @media (max-width: 768px) {
     .nav-brand .logo {
-        height: 40px;
-        padding: 4px 8px;
+        height: 55px;
     }
 }
