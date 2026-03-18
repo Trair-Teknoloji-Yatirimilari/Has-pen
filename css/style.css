@@ -1349,6 +1349,13 @@ section {
     height: 50px;
     width: auto;
     display: block;
+    background: transparent;
+    mix-blend-mode: multiply;
+}
+
+.nav-brand a {
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
