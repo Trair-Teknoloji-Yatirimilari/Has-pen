@@ -1343,3 +1343,16 @@ section {
         font-size: 0.875rem;
     }
 }
+
+/* Logo Styles */
+.nav-brand .logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-brand .logo {
+        height: 40px;
+    }
+}
