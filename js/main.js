@@ -31,6 +31,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
+// Project Filter
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filter = button.getAttribute('data-filter');
+        
+        projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+});
+
 // Form Submission Handler
 const quoteForm = document.getElementById('quoteForm');
 
@@ -63,13 +112,13 @@ quoteForm.addEventListener('submit', function(e) {
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
-        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
     } else {
-        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        header.style.boxShadow = 'none';
     }
 });
 
-// Animation on scroll (simple version)
+// Animation on scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
