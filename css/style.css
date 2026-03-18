@@ -1346,7 +1346,7 @@ section {
 
 /* Logo Styles */
 .nav-brand .logo {
-    height: 70px;
+    height: 85px;
     width: auto;
     display: block;
     background: transparent;
@@ -1359,6 +1359,6 @@ section {
 
 @media (max-width: 768px) {
     .nav-brand .logo {
-        height: 55px;
+        height: 65px;
     }
 }
